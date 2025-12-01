@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zaika India</title>
+    <link rel="icon" href="./src/logo.png">
+
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./stylemenu.css">
+    <link rel="stylesheet" href="./cart.css">
+    <link rel="stylesheet" href="./address.css">
+    <link rel="stylesheet" href="./confirm.css">
+    <link rel="stylesheet" href="./payment.css">
+    <link rel="stylesheet" href="./ordersu.css">
+</head>
+<body>
+
+     <nav class="cointaine">
+            <div class="logo">
+              <img src="./src/logo.png" loading="lazy" alt="">
+            </div>
+
+            <div class="nav-link">
+              <a href="./">Home</a>
+              <a href="#Menu" onclick="openMenu()">Menu</a>
+              <a href="#" onclick="openCart()">Cart</a>
+              <a href="#highlight1">Contact</a>
+            </div>
+
+            <div class="nav-button">
+                <button class="dark" onclick="Change()">
+                <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
+                <path d="M17 12C17 14.7614 14.7614 17 12 17C9.23858 17 7 14.7614 7 12C7 9.23858 9.23858 7 12 7C14.7614 7 17 9.23858 17 12Z" stroke="#141B34" stroke-width="1.5" />
+                <path d="M11.9955 3H12.0045M11.9961 21H12.0051M18.3588 5.63599H18.3678M5.63409 18.364H5.64307M5.63409 5.63647H5.64307M18.3582 18.3645H18.3672M20.991 12.0006H21M3 12.0006H3.00898" stroke="#141B34" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>  -->
+                ☀️</button>
+                <button class="log" onclick="openPopup()">Sign in</button>
+            </div>
+    </nav>
+
+    <div id="logmessage"></div>
+
+
+    <div class="user-dropdown" id="userDropdown" style="display: none;">
+      <ul>
+        <li><a href="#" onclick="openProfile()">👤 Profile</a></li>
+        <li><a href="#" onclick="openSetting()">⚙️ Settings</a></li>
+        <li><a href="#" onclick="OrderUser()">➡️ Order</a></li>
+        <li><a href="#" onclick="logoutUser()">➡️ Logout</a></li>
+      </ul>
+    </div>
+
+
+    <!-- Sign Up -->
+     <!-- <p id="msg" class="success-mag"></p> -->
+     <div class="popup" id="signup-popup">
+      <div class="popup-content">
+        <div class="cross">
+             <span class="close-btn" onclick="closePopup()">&times;</span>
+             <h2>Sign in</h2>
+        </div>
+
+        <div>
+          <p class="t3">Get access to more learning features</p>
+          <p class="t2">Don't have account?<a href="#"  onclick="switchToLogin()"><span style="color: green"> Register</span></a></p>
+        </div> 
+
+        <div class="link">
+          <img src="./src/facebook.png" alt="">
+          <img src="./src/instagram.png" alt="">
+          <img src="./src/twitter.png" alt="">
+          <img src="./src/linkedin.png" alt="">
+        </div>
+
+        <div class="space">or</div> 
+
+        <form id="singin-form"> 
+            <input type="email" placeholder="Email" class="input" id="logingemail" required><br>
+            <input type="password" placeholder="Password" class="input"  id="password" required><br>
+            <p class="forget">Forget your password?</p>
+            <button type="button" onclick="showAlert()">Sign In</button>
+        </form>         
+      </div>
+     </div>
+
+     <!-- Registation -->
+      <div class="popup1" id="registation-popup">
+      <div class="reg-popup">
+        <div class="popup-content1">
+          <span class="close-btn"  onclick="closeRegister()">&times;</span>
+          <h2>Create your account</h2>
+          <p>Already have an account? 
+          <a href="#" onclick="switchToLogin1()"><span style="color:aqua">Sign In</span></a></p>
+        </div>
+
+        <div class="link">
+          <img src="./src/facebook.png" alt="">
+          <img src="./src/instagram.png" alt="">
+          <img src="./src/linkedin.png" alt="">
+          <img src="./src/twitter.png" alt="">
+        </div>
+
+        <div class="space1">or</div>
+
+        <form id="loginForm" >
+          
+          <div>
+            <span class="error-msg" class="input-group"></span>
+            <input type="text" placeholder="First Name" id="firstName"><br>
+          </div>
+
+          <div>
+            <span class="error-msg" class="input-group"></span>
+            <input type="email" placeholder="Email" id="email"><br>
+          </div>
+
+          <div>
+            <span class="error-msg" class="input-group"></span>
+            <input type="password" placeholder="Password" id="re_password"><br>
+          </div>
+
+          <div>
+            <span class="error-msg" class="input-group"></span>
+            <input type="number" placeholder="Age" id="age"><br>
+          </div>
+
+
+
+          <!-- <button class="reg-log" onclick="registerUser()">Create account</button> -->
+           <button class="reg-log"  type="submit" >Create account</button> 
+
+          <p id="message"></p>
+        </form>
+
+
+      </div>
+</div>
+
+<!-- OrderSumary -->
+ <section id="order-summary1">
+    <div id="order-container1">
+
+        <button id="close-order1" class="close-btn2" onclick="CloseOrder()">✖</button>
+       <p>Order Summary</p>
+
+      <div id="order-summ">
+        <!-- <div id="item-row">
+          
+          <div>
+            <img src="logo.png" alt="">
+          </div>
+
+          <div id="item-details">
+            <p id="item-name">Burger</p>
+            <p id="item-quality">Qty : 1</p>
+          </div>
+
+          <div class="item-price">
+            <p id="item-price">$ 8.99</p>
+          </div> -->
+
+        <!-- </div> -->
+      </div>
+
+      <div id="address-address1">
+          <p id="address-title1">address</p>
+
+        <div id="address-details1">
+          <!-- <div class="address-row">
+            <span id="name">Shubham Kumar</span>
+          </div>
+
+          <div class="address-row">
+            <span id="PhoneNumber">9771868425</span>          
+          </div>
+
+          <div class="address-row">
+            <span id="Landnark">Batamore, </span>
+            <span id="Pincode">28032</span>           
+          </div> -->
+        </div>
+      </div>
+
+      <div id="order-totals1">
+
+          <div class="total-rows">
+            <span>Items Total :</span>
+            <span id="itemTotal">$ 0.00</span>           
+          </div>
+
+          <!-- <div class="total-row">
+            <span>Deliver Charge :</span>
+            <span id="deliveryCharge">$ 20</span>
+          </div> -->
+
+          <!-- <div class="total-row">
+            <span>DeliveryTypes :</span>
+            <span id="DeliveryDetails">Message</span>
+          </div> -->
+
+
+          <!-- <div class="total-row">
+            <span>Payment Method</span>
+            <span id="paymentMethod">EMI (6 Months)</span>
+          </div> -->
+
+        <!-- <div class="emi-box" id="emiBox">
+          <div class="total-row">
+              <span>Monthly EMI:</span>
+              <span id="monthlyEmi">$ 0.00</span>
+          </div>
+
+          <div class="total-row">
+              <span>EMI Tenure:</span>
+              <span id="emiMonths">0 Months</span>
+          </div>
+      </div> -->
+
+
+          <!-- <div class="total-row total-final">
+            <span>Total Payable</span>
+            <span id="totalPayable">$ 350</span>
+          </div> -->
+
+      </div>
+
+      
+
+    </div>
+  </section>
+
+
+            <!-- Banner section  -->
+             
+      <section id="bann">
+              <div class="bann-container">
+                  
+                  <div class="bann-title">
+                      <h3>Royal Taste of all State</h3>
+                  </div>
+
+                  <div class="bann-subtitle">
+                      <p>SUPER <br> <span style="color: orangered;">FOOD</span>MENU </p>
+                  </div>
+
+                  <div class="bann-button">
+                      <button type="button">ORDER NOW</button>
+                  </div>
+
+            <div class="bann-offer">
+                <div class="offer-image" id="offer-image">
+                    <img src="./src/food1.jpg" alt="Discount Offer">
+                </div>
+                <div class="offer-image1">
+                    <div class="offer-text">UP TO <br><span style="color: orange; font-size: 40px;"> 50% </span><br> OFF</div>
+                    <div id="totalprice">&#8377;60</div>
+                </div>
+            </div>
+                  
+
+            <div class="offer-banner">
+                <p id="clock"></p>
+                <p id="offer-timer"></p>
+            </div>
+                  
+        </div>
+    </section>
+
+ <!-- <section id="order-summary1">
+    <div id="order-container1">
+
+        <button id="close-order1" class="close-btn2" onclick="CloseOrder()">✖</button>
+       <p>Order Summary</p>
+
+      <div id="order-summ">
+        
+      </div>
+
+      <div id="address-address1">
+          <p id="address-title1">address</p>
+
+        <div id="address-details1">
+          
+        </div>
+      </div>
+
+      <div id="order-totals1">
+
+          <div class="total-rows">
+            <span>Items Total :</span>
+            <span id="itemTotal">$ 0.00</span>           
+          </div>
+
+      </div>
+
+      
+
+    </div>
+  </section> -->
+
+
+    <!-- Header -->
+    <section class="hero" id="Home">
+            <div class="poster">
+        <div class="left">
+                <div class="brand">
+                    <h1>ZAIKA INDIA</h1>
+                    <div class="sub">Royal Taste of All States</div>
+                    <div class="tagline">From Kashmir to Kanyakumari — Flavours of India in One App</div>
+                </div>
+            
+
+            <div class="cta">
+            <a href="#" class="btn">ORDER NOW</a>
+            <div class="small-info">Authentic regional dishes • Verified local chefs • Doorstep delivery</div>
+            </div> 
+
+            <div class="features">
+                <div class="featuret">100% Hygienic</div>
+                <div class="featuret">Regional Chefs</div>
+                <div class="featuret">Express Delivery</div>
+                <div class="featuret">Fresh &amp; Tasty</div>
+            </div>
+
+            <div class="qr-row">
+                <div class="qr">QR</div>
+                <div class="download">
+                <div style="font-weight:700">Scan to Order</div>
+                <div class="muted">App / Website</div>
+                </div>
+            </div>
+            
+            <div class="socials">
+            <a href="#"><img src="./src/instagram.png" loading="lazy" alt=""></a>
+            <a href="#"><img src="./src/linkedin.png" loading="lazy" alt=""></a>
+            <a href="#"><img src="./src/facebook.png" loading="lazy" alt=""></a>
+            <div class="socials-t1">Join 10k+ food lovers</div>
+            </div>
+        </div>
+
+        <div class="right">
+            <div class="collage">
+                <!-- Replace src with actual big hero food image -->
+                <div class="big" style="background:#eee">
+                    <img src="./src/food1.jpg" loading="lazy" alt="hero food">
+                </div>
+
+                <div class="small"><img src="./src/food2.jpg" loading="lazy" alt="dessert"></div>
+                <div class="small"><img src="./src/food3.jpg" loading="lazy" alt="noodles"></div>
+         </div>
+
+            <div class="map-strip" aria-hidden="true">
+                <!-- Use these as small visual hints for states; replace images with mini icons / flags / food thumbnails -->
+                <div class="state"><img src="./src/food_1.png" loading="lazy" alt="Punjab"> Paratha</div>
+                <div class="state"><img src="./src/food_4.png" loading="lazy" alt="Karnataka"> Dosa</div>
+                <div class="state"><img src="./src/food_2.png" loading="lazy" alt="West Bengal"> Fish</div>
+                <div class="state"><img src="./src/food_3.png" loading="lazy" alt="Bihar"> Litti</div>
+            </div>
+
+            <div class="footer-note">Delivering authentic tastes from every state — Order now and taste the diversity of India.</div>
+
+        </div>
+
+    </div>
+    </section>
+
+    <!-- Add to cart -->
+
+    <section class="cart-section" id="cart-section">
+
+        <div class="cart-container">
+            
+            <div class="cart-header">
+                <h1>Our Cart</h1>
+            </div>
+
+            <div class="Cart-info1">
+                <p>Image</p>
+                <p>Name</p>
+                <p>Price</p>
+                <p>Quentity</p>
+                <p>Remove</p>
+            </div>
+
+            <div class="cart-items" id="cart-items"></div>
+
+            <div id="cart-Total"></div>
+
+            
+
+            <div class="cart-buttons">
+                <button class="button1" onclick="CardBack()">Back</button>
+                <button class="button1" onclick="goToAddress()">Go to Address</button>
+            </div>
+        </div>
+    </section>
+
+    <!---------------------- Address ---------------------------->
+    <section class="address-section" >
+        <div class="address-container">
+
+            <div class="address-header">
+            <h1>ZAIKA INDIA</h1>
+            </div>
+
+            <div class="address-form-section">
+            <p class="form-title">Delivery Address</p>
+
+            <form class="address-form">
+
+                <div class="form-group">
+                <label for="fullname">Full Name :</label><br>
+                <input type="text" id="fullname" placeholder="Full Name">
+                </div>
+
+                <div class="form-group">
+                <label for="mobilenumber">Mobile Number :</label><br>
+                <input type="number" id="mobilenumber" placeholder="Mobile Number">
+                </div>
+
+                <div class="form-group">
+                <label for="housenumber">House Number :</label><br>
+                <input type="text" id="housenumber" placeholder="House Number">
+                </div>
+
+                <div class="form-group">
+                <label for="street">Street :</label><br>
+                <input type="text" id="street" placeholder="Street/House No">
+                </div>
+
+                <div class="form-group">
+                <label for="state">state :</label><br>
+                 <select id="state">
+                        <option value="">Select State</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Gujrat">Gujrat</option>
+                        <option value="Bihar">Bihar</option>
+                        <option value="Maharashtra">Maharashtra</option>
+                        <option value="Bengal">West Bengal</option>
+                        <option value="Punjab">Punjab</option>
+                    </select> 
+                </div>
+
+                <div class="form-group">
+                    <label for="city">State :</label><br>
+                    <select id="city">
+                        <option value="">Select City</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                <label for="pincode">Pincode :</label><br>
+                <input type="number" id="pincode" placeholder="Pincode">
+                </div>
+
+                <div class="form-group">
+                <label for="landmark">Landmark :</label><br>
+                <input type="text" id="landmark" placeholder="Landmark">
+                </div>
+
+            </form>
+            </div>
+
+            <div class="address-button">
+            <button type="button" class="continue-btn"  onclick="AddressBack()">Back</button>
+            <button type="button" class="continue-btn" onclick="change()" >Save & Continue</button> <!-- onclick="Confirmation()" -->
+            </div>
+
+            <div class="address-footer1">
+            <p>Zaika India - Royal Taste of All States</p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!--------------------------- Confirmation part ---------------------------------->
+    <section class="confirmation-section">
+        <div class="confirmation-container">
+
+            <div class="confirmation-title">
+                <h1>Confirmation</h1>
+            </div>
+
+            <!-- address Section -->
+            <div class="confirmation-details">
+
+                    <div class="addr-section">
+                        <h1 class="section-title">Address</h1>
+                        
+                        <div class="addr-info">
+                            <div class="address-fields">
+
+                                <div class="addr-field">
+                                    <p id="c-fullname"></p>
+                                </div>
+
+                                <div class="addr-field">
+                                    <p  id="c-mobilenumber"></p>
+                                </div>
+
+                                <div class="addr-field1">
+                                    <p id="c-state"></p>
+                                    <p id="c-city"></p>
+                                </div>
+
+                                <div class="addr-field1">
+                                    <p id="c-street"></p>
+                                    <p id="c-pincode"></p>
+                                </div>
+
+                            </div> 
+                        </div>  
+                    </div>
+
+                    
+
+                <!-- Cart Summary -->
+
+                <div class="Cart-Summary">
+                    <h1 class="section-title">Cart Summary</h1>
+
+                    <div class="cart-summary-list" id="cart-summary-list">
+                            <!-- <div class="cart-item">
+                                <div class="t1">
+                                 <p id="c-itemname">Item-name</p>
+                                 <p id="c-quantity">* quantity</p>
+                                </div>
+                                <div>
+                                    <p id="c-price">price</p>
+                                </div>
+                            </div> -->
+                    </div>
+                        <div class="cart-total">
+                            <p id="c-totalAmount">Total Amount : </p>
+                            <p id="total-price"></p>
+                        </div>
+                    </div>
+                <!-- </div> -->
+            </div>
+
+            <div class="delivery-section">
+                    <h1 class="section-title">Delivery</h1>
+                    <p class="choose-msg">Choose One delivery Option to continue</p>
+                <div class="delivery-type">
+                    <button type="button" id="delivery-btn-normal">Normal Delivery</button>
+                    <button type="button" id="delivery-btn-preorder">Pre-Order</button>
+                    <input type="date" id="preorder-date" disabled/>
+                    <input type="time"  id="preorder-time" disabled/> 
+                </div>
+
+                <div class="proceed-btn-wrapper"> 
+                    <button type="Submit" class="proceed-payment-btn"  onclick="ComformBack()">Back</button>
+                    <button type="Submit" class="proceed-payment-btn" id="proceed-paymen-btn" >Proced To Payment</button>
+                </div>
+            </div>     <!--onclick="Confirmation()" -->
+        </div>
+    </section>
+
+    <!---------------- Payment ------------------------>
+    <section class="Payment-section">
+        <div class="Payment-container">
+            <div class="Payment-header">
+                 <img src="./src/logo.png" alt="Zaika India">
+            </div>
+
+            <div class="Payment-title">
+                <p>Payment Section</p>
+            </div>
+
+            <div class="Payment-content">
+                <div class="Order-summary">
+                    <div class="Order-row">
+                        <p class="Order-label">Order amount</p>
+                        <p id="Order-amounts"></p>
+                    </div>
+                    <div class="Payment-method">
+                        <p class="Method-label">Choose payment method</p>
+                        <input type="radio" class="method-option" id="Card" name="method" value="Card" onclick="paysection()"><label for="Card">Credit/Debit Card</label><br>
+                        <input type="radio" class="method-option" id="Net" name="method" value="NET Banking" onclick="paysection()"><label for="Net">Net Banking</label><br>
+                        <input type="radio" class="method-option" id="Cash" name="method" value="Cash on delivery" onclick="paysection()"><label for="Cash">Cash on Delivery</label><br>
+                        <input type="radio" class="method-option" id="EMI" name="method" value="EMI"  onclick="paysection()"><label for="EMI">EMI (Buy now, pay later)</label><br>
+                    </div>
+
+                    <div class="emisection" id="emiBox">
+                        <div class="emiheader">
+                            <p>Available EMI partners & tenures</p>
+                        </div>
+
+                        <div class="emiselectbox">
+
+                          <div class="from-group">
+                                <select id="EMIBank">
+                                    <option value="">Select Bank</option>
+                                    <option value="Bank A">Bank A</option>
+                                    <option value="Bank B">Bank B</option>
+                                    <option value="Bank C">Bank C</option>
+                                </select>
+                                <Span class="errormsg"></Span>
+                          </div>
+
+                            <div class="from-group">
+                                <select id="EMIDuration">
+                                    <option value="">Select Duration</option>
+                                    <option value="3">3 Month</option>
+                                    <option value="6">6 Month</option>
+                                    <option value="9">9 Month</option>
+                                </select>
+                                <Span class="errormsg"></Span>
+                            </div>
+                        </div>
+
+                        <div class="emibreakdown">
+                            <p class="emititle">EMI breakdown</p>
+                            <div class="emirow">
+                                <p>Monthly EMI</p>
+                                <p id="monthlyemi"></p>
+                            </div>
+                            <div class="emirow">
+                                <p>Total Payable</p>
+                                <p id="totalpayable"></p>
+                            </div>
+                            <div class="emirow">
+                                <p>Total Interest (2%)</p>
+                                <p id="totalinterest"></p></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="Payment-form-container">
+                    <form class="Payment-form" id="payment-form">
+                        <label for="Pamentdetails">Payment details</label><br>
+
+                        <input type="number" class="input-box" placeholder="Card number (XXXX-XXXX-XXXX-XXXX)" id="Pamentdetails" disabled>
+                        <span class="errormsg"></span>
+
+                        <input type="number" class="input-box" placeholder="MM/YY" id="monthyear" disabled>
+                        <span class="errormsg"></span>
+
+                        <input type="number" class="input-box" placeholder="CVV" id="cvv" disabled>
+                        <span class="errormsg"></span>
+
+                        <input type="text" class="input-box" placeholder="Name on card" id="cardname" disabled>
+                        <span class="errormsg"></span>
+                        
+                        <div class="Coupon-section">
+                            <p class="Coupon-text">Have a coupon? Apply</p>
+                            <p class="Secure-text">Secure payment</p>
+                        </div>
+
+                        <div class="Pay-button">
+                        <button type="submit"  onclick="paymentBack()">Back</button>
+                        <button type="submit"  onclick="Cardselect()">Pay Now</button>
+                        </div>
+                    </form>
+                </div>                   
+            </div>
+        </div>
+    </section>
+
+
+    <!-------------------- MENU -------------------- -->
+      <section class="menu" id="Menu">
+        <div class="menu-container">
+
+            <div class="menu-header">
+                <h1 class="menu-title">Zaika India – Royal Taste of All State</h1>
+                <p class="menu-description">
+                    Zaika India – Royal Taste of All State is a food brand that offers a variety of authentic Indian dishes from different states, bringing the true taste and culture of India together in one place.
+                </p>
+            </div>
+
+            <div class="restaurant-grid">
+
+                <div class="restaurant-card" onclick="ShowMenu('bihar')">
+                    <img src="./src/food_3.png" alt=""  loading="lazy" class="restaurant-image">
+                    <h3 class="restaurant-name">Bihar</h3>
+                </div>
+
+                <div class="restaurant-card" onclick="ShowMenu('punjab')">
+                    <img src="./src/food_1.png" alt="" loading="lazy" class="restaurant-image">
+                    <h3 class="restaurant-name">Panjab</h3>
+                </div>
+
+                <div class="restaurant-card" onclick="ShowMenu('bangal')">
+                    <img src="./src/food_2.png" alt="" loading="lazy" class="restaurant-image">
+                    <h3 class="restaurant-name">Bangal</h3>
+                </div>
+
+                <div class="restaurant-card" onclick="ShowMenu('southIndian')">
+                    <img src="./src/food_4.png" alt="" loading="lazy" class="restaurant-image">
+                    <h3 class="restaurant-name">South-Indian</h3>
+                </div>
+
+                <div class="restaurant-card" onclick="ShowMenu('gujrat')">
+                    <img src="./src/food1.jpg" alt="" loading="lazy" class="restaurant-image">
+                    <h3 class="restaurant-name">Gujrat</h3>
+                </div>
+
+                <div class="restaurant-card" onclick="ShowMenu('delhi')">
+                    <img src="./src/food3.jpg" alt="" loading="lazy" class="restaurant-image">
+                    <h3 class="restaurant-name">Delhi</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+            <!-- Menu section  -->
+    <section id="menu-section">
+        <h2 id="menu-titles"></h2>
+        <div id="menu-items" class="menu-list">
+         </div>
+        <a href="./add.html"></a>
+    </section>
+
+  <!---------------------------- Footer -------------------------------------->
+
+
+    <footer class="highlight1" id="highlight1">
+             <div class="card1">
+                <div class="heading">Zaika India.</div>
+                <div class="discription">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium minima nostrum sapiente accusamus, voluptates quas cum autem dolor maiores harum delectus facere, in, quae itaque aut eligendi nulla quisquam voluptatum.</div>
+               <div class="logo">
+                    <div><img src="./src/facebook.png" alt=""></div>
+                    <div><img src="./src/linkedin.png" alt=""></div>
+                    <div><img src="./src/instagram.png" alt=""></div>
+              </div>
+              </div>
+
+              <div class="card2">
+                  <div class="t1">Company</div>
+                  <p>Home</p>
+                  <p>About Us</p>
+                  <p>Delivery</p>
+                  <p>Privacy policy</p>
+              </div>
+
+              <div class="card3">
+                  <div class="t1">GET IN TOUCH</div>
+                  <p>+1-212-456-7890</p>
+                  <p>Zaika@Gmail.com</p>
+              </div> 
+    </footer> 
+
+            <script>
+                
+        // window.addEventListener("DOMContentLoaded", function () {
+        //     let totalAmount = Number(localStorage.getItem("totalAmount")) || 0;
+        //     document.getElementById("Order-amounts").innerText =  totalAmount;
+        // });
+
+        function updateAmountUI() {
+        let amt = Number(localStorage.getItem("totalAmount")) || 0;
+        document.getElementById("Order-amounts").innerText = amt;
+       }
+
+
+            function paysection(){
+
+            const emibox = document.getElementById("emiBox");
+            const emiRadio = document.getElementById("EMI");
+            const NetRadio = document.getElementById("Net");
+            const CashRadio = document.getElementById("Cash");
+            const cardRadio = document.getElementById("Card");
+
+            const cardNumber = document.getElementById("Pamentdetails");
+            const month = document.getElementById("monthyear");
+            const CV = document.getElementById("cvv");
+            const cardName = document.getElementById("cardname");
+
+            //Disable card input function
+            const disableCard = () => {
+                cardNumber.disabled = true;
+                month.disabled = true;
+                CV.disabled = true;
+                cardName.disabled = true;
+                document.querySelectorAll(".errormsg").forEach(i => i.textContent = "");
+                // RESET input border back to normal
+                [cardNumber, month, CV, cardName].forEach(input => {
+                input.style.border = "1px solid #ccc";
+                });
+
+            };
+
+            // Enable card inputs function
+            const enableCard = () => {
+                cardNumber.disabled = false;
+                month.disabled = false;
+                CV.disabled = false;
+                cardName.disabled = false;
+            };
+
+            let amt = Number(localStorage.getItem("totalAmount")) || 0;
+        document.getElementById("Order-amounts").innerText = amt;
+
+            // EMI Selected
+
+            if(emiRadio.checked){
+             if (amt >=2000){
+                emibox.style.display = "block";
+                disableCard();
+                return;
+            } 
+            
+                alert("Your amount is less than ₹2000. EMI option is not available!");
+                emibox.style.display = "none";
+                emiRadio.checked = false;
+                enableCard();
+            }
+           
+            // if (emiRadio.checked) {
+            //     emibox.style.display = "block";
+            //     disableCard();
+            //     return;
+            // }
+
+            // Card Selected
+            if (cardRadio.checked) {
+                emibox.style.display = "none";
+                enableCard();
+                return;
+            }
+
+            // Net Banking
+            if (NetRadio.checked) {
+                emibox.style.display = "none";
+                disableCard();
+                return;
+            }
+
+            // Cash on Delivery
+            if (CashRadio.checked) {
+                emibox.style.display = "none";
+                disableCard();
+                return;
+            }
+
+        }
+
+            function Cardselect(){
+                // EMI select -> EMI validation
+                if(document.getElementById("EMI").checked) {
+                    return calculateEMI();
+                }
+
+                // Card select ->card validation 
+                if(document.getElementById("Card").checked) {
+                    return validateCard();
+                }
+
+                // Netbanking/cash -> No validation
+                return true ;
+            } 
+
+        const form1 = document.getElementById("payment-form");
+
+
+        function validateCard() {
+
+            // Stop validation if Card is NOT selected
+            if (!document.getElementById("Card").checked) {
+                return true;  
+            }
+            let valid = true;
+
+            const cardNumber = document.getElementById("Pamentdetails");
+            const month = document.getElementById("monthyear");
+            const CV = document.getElementById("cvv");
+            const cardName = document.getElementById("cardname");
+
+            // Clear old errors
+            document.querySelectorAll(".error-msg").forEach(e => e.textContent = "");
+
+            // Card Number Validation
+            if (cardNumber.value.trim() === "") {
+                showError(cardNumber, "Card Number is required");
+                valid = false;
+            } else {
+                showSuccess(cardNumber);
+            }
+
+            // Month Validation
+            if (month.value.trim() === "") {
+                showError(month, "Month and Year is required");
+                valid = false;
+            } else {
+                showSuccess(month);
+            }
+
+            // CVV Validation
+            if (CV.value.trim() === "") {
+                showError(CV, "CVV is required");
+                valid = false;
+            } else {
+                showSuccess(CV);
+            }
+
+            // Card Name Validation
+            if (cardName.value.trim() === "") {
+                showError(cardName, "Name on Card is required");
+                valid = false;
+            } else {
+                showSuccess(cardName);
+            }
+
+            return valid;
+        }
+
+
+        function showError(input, message) {
+            const errorSpan = input.nextElementSibling;
+            // const errorSpan = input.previousElementSibling;
+            // const errorSpan = input.parentElement.querySelector(".error-msg");
+            errorSpan.textContent = message;
+            input.style.border = "2px solid red";
+        }
+
+        function showSuccess(input) {
+            const errorSpan = input.nextElementSibling;
+            // const errorSpan = input.previousElementSibling;
+            // const errorSpan = input.parentElement.querySelector(".error-msg");
+            errorSpan.textContent = "";
+            input.style.border = "1px solid #ccc";
+        }
+
+
+            
+
+
+
+        //Submit Button Event (final) 
+
+        form1.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            if(Cardselect()){
+
+                if(document.getElementById("EMI").checked){
+                    alert("EMI Payment Submitted Successfully!");
+                    window.location.href = "./index.html";
+                } else if (document.getElementById("Card").checked) {
+                    alert("Card Payment Submitted Successfully!");
+                    window.location.href = "./index.html";
+                } else if (document.getElementById("Net").checked){
+                alert("Net Banking  Payment Submitted Successfully!");
+                window.location.href = "./index.html";
+                } else if (document.getElementById("Cash").checked){
+                alert("Cash on delivery Selected! ");
+                window.location.href = "./index.html";
+                }
+            }
+
+                    updateOrders()
+        });
+
+        // Calculate EMI section 
+
+        // let totalAmount  = Number(localStorage.getItem("totalAmount")) || 0 ;
+
+        const bank = document.getElementById("EMIBank")
+        const duration = document.getElementById("EMIDuration");
+
+        const emiText = document.getElementById("monthlyemi");
+        const totalPaytext = document.getElementById("totalpayable");
+        const interestedText = document.getElementById("totalinterest");
+
+        function calculateEMI(){
+
+            // Total amount always fetch fresh
+            let totalAmount = Number(localStorage.getItem("totalAmount")) || 0;
+
+            let selectBank = bank.value;
+            let months = Number(duration.value);
+
+            //Validation 
+
+            if(!selectBank){
+                bank.nextElementSibling.innerText  = "Please select a bank!";
+                return;
+            } else {
+                bank.nextElementSibling.innerText = "";
+            } 
+
+            if (!months) {
+                duration.nextElementSibling.innerText = "Please select duration!";
+                return;
+            } else {
+                duration.nextElementSibling.innerText = "";
+            }
+
+            //  EMI Formula with 2% interest per month 
+            let interest = (totalAmount * 0.02) * months;
+            let totalPayable = totalAmount + interest;
+            let monthlyEMI = totalPayable / months;
+
+            // Show Data 
+
+            emiText.innerText = `₹ ${monthlyEMI.toFixed(2)}`;
+            totalPaytext.innerText = `₹ ${totalPayable.toFixed(2)}`;
+            interestedText.innerText = `₹ ${interest.toFixed(2)}`;
+
+            // Store in Everything in local storage 
+ 
+            let emiData = {
+                bank : selectBank,
+                duration : months,
+                totalAmount : totalAmount,
+                interest : interest.toFixed(2),
+                totalPayable : totalPayable.toFixed(2),
+                monthlyEMI : monthlyEMI.toFixed(2)
+            };
+            localStorage.setItem("EMI_Details", JSON.stringify(emiData))
+            return true;
+        }
+
+        // Save selected payment mode 
+
+        const paymentRadios = document.querySelectorAll('input[name="method"]');
+
+        paymentRadios.forEach(radio => {
+            radio.addEventListener("change", function() {
+
+                let selectedMode = this.value; //EMI , Card , Net Cash
+
+                // Store in localStore
+                localStorage.setItem("PAYMENT_MODE", selectedMode);
+            });
+        });
+
+        // Trigger calculation on selection change
+        bank.addEventListener("change", calculateEMI);
+        duration.addEventListener("change", calculateEMI);
+
+    function paymentBack(){
+        document.querySelector(".Payment-section").style.display = "none";
+        document.querySelector(".hero").style.display = "none";
+        document.querySelector(".menu").style.display = "none";
+        document.querySelector(".confirmation-section").style.display = "flex";
+
+    
+        document.querySelector(".Payment-section").scrollIntoView({
+        behavior: "smooth"
+        })
+    }
+    </script>
+    <script src="./main.js"></script> 
+    <script src="./item.js"></script>
+    <script src="./cartitem.js"></script>
+    <script src="./add.js"></script>
+    <script src="./com.js"></script>
+    <script src="./orders.js"></script>
+</body> 
+</html>

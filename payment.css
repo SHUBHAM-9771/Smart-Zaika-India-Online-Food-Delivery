@@ -1,0 +1,375 @@
+/* * {
+    margin: 0;
+    padding: 0;
+} */
+
+/* DARK MODE - PAYMENT SECTION */
+body.dark-mode .Payment-section {
+    background-color: #121212;
+    color: #E0E0E0;
+    padding: 20px 0;
+}
+
+body.dark-mode .Payment-container {
+    background-color: #1E1E1E;
+    /* border: 1px solid #FF6F00;
+    border-radius: 8px;
+    padding: 25px; */
+}
+
+body.dark-mode .Payment-header img {
+    max-width: 150px;
+    display: block;
+    /* margin: 0 auto 20px; */
+}
+
+body.dark-mode .Payment-title p {
+    color: #FFA726;
+    /* font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 20px; */
+}
+
+body.dark-mode .Order-summary, 
+body.dark-mode .Payment-form-container {
+    background-color: #2A2A2A;
+    /* border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px; */
+}
+
+body.dark-mode .Order-label, 
+body.dark-mode .Method-label, 
+body.dark-mode .emititle, 
+body.dark-mode .Coupon-text, 
+body.dark-mode .Secure-text {
+    color: #FFD54F;
+    font-weight: 600;
+}
+
+body.dark-mode .method-option + label {
+    color: #E0E0E0;
+    /* margin-left: 5px;
+    cursor: pointer; */
+}
+
+body.dark-mode .emisection {
+    background-color: #2A2A2A;
+    /* border: 1px solid #FF6F00;
+    border-radius: 5px;
+    padding: 15px;
+    margin-top: 10px; */
+}
+
+body.dark-mode .emiselectbox select, 
+body.dark-mode .input-box {
+    background-color: #1E1E1E;
+    color: #E0E0E0;
+    /* border: 1px solid #FF6F00;
+    border-radius: 5px;
+    padding: 8px;
+    width: 100%;
+    margin-bottom: 10px; */
+}
+
+body.dark-mode  .emititle {
+    /* color: #FFD54F; */
+    color: black;
+}
+
+body.dark-mode .emirow p {
+    /* color: #FFD54F; */
+    color: black;
+}
+
+body.dark-mode .Pay-button button {
+    background-color: #FF6F00;
+    color: #fff;
+    border: none;
+    /* border-radius: 5px;
+    padding: 10px 15px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: 0.3s; */
+}
+
+body.dark-mode .Pay-button button:hover {
+    background-color: #FFB74D;
+    color: #000;
+}
+
+body.dark-mode .Coupon-section {
+    display: flex;
+    justify-content: space-between;
+    /* margin: 15px 0; */
+}
+
+body.dark-mode .Coupon-text, 
+body.dark-mode .Secure-text {
+    color: #FFD54F;
+}
+
+.Payment-section {
+    /* display: flex; */
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+    background-color: #f5f6fa;
+    width: 100%;
+}
+
+.Payment-container {
+    width: 90%;
+    min-height: 500px;
+    height: auto;
+    background-color: #ffffff;
+    padding: 30px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    margin: auto;
+}
+
+.Payment-header img {
+    display: inline-block;
+    width: 60px;
+    height: 60%;
+    margin: 0px 0px;
+}
+
+.Payment-title p {
+    text-align: center;
+    font-size: 25px;
+    font-weight: 600;
+    opacity: 0.8;
+    margin-bottom: 10px;
+    margin-top: 0px;
+}
+.Payment-content {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.Order-summary {
+    width: 45%;
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 20px;
+    border: 2px solid black;
+    box-shadow: 0, 3px, 10px, rgba(0,0,0,0.07);
+    height: auto;
+}
+.Payment-method {
+    margin-top: 15px;
+}
+
+.Method-label {
+    font-weight: 600;
+    margin-bottom: 10px;
+    display: block;
+}
+.Order-amounts {
+    font-weight: 600;
+    font-size: 17px;
+    color: #e74c3c;
+}
+
+.method-option {
+    padding: 10px;
+    margin-right: 10px;
+    transform: scale(1.2);
+    box-sizing: border-box;
+}
+
+.Payment-form-container {
+    padding: 20px;
+    width: 48%;
+    border-radius: 15px;
+    border: 2px solid black;
+    background: #ffffff;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.07);
+    height: auto;
+}
+
+
+
+
+.input-box {
+    width: 100%;
+    padding: 12px 5px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+.Coupon-section {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.Coupon-text {
+    margin-left: 3px;
+    color: #3498db;
+    cursor: pointer;
+    font-weight: 500;
+}
+.Secure-text {
+    color: #27ae60;
+    font-weight: 600;
+}
+.Pay-button {
+    display: flex;
+    width: 50%;
+    gap: 20px;
+
+}
+.Pay-button button {
+    /* width: 100%; */
+    margin-top: 20px;
+    padding: 15px;
+    background: #ff5722;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    font-weight: 600;
+}
+.Pay-button button:hover {
+    background: #e64a19;
+    transform: translateY(-2px);
+}
+
+/* EMI section  */
+
+.emisection {
+    display: none;
+    width: 70%;
+    max-width: 520px;
+    background: #3498db;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    font-family: Arial, sans-serif;
+}
+
+.emiheader p {
+    font-size: 10px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.emiselectbox {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.from-group {
+    flex: 1;         /* Both dropdowns equal width */
+}
+.from-group select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 15px;
+    outline: none;
+    box-sizing: border-box;
+} 
+
+
+.emibreakdown {
+    padding: 5px;
+    /* margin-top: 10px; */
+    background: #f5f5f5;
+
+}
+
+.emititle {
+    font-size: 10px;
+    font-weight: bold;
+    margin-top: 10px;
+    padding: 0px 0px 0px 5px;
+}
+
+
+.emirow {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #efefef;
+    font-size: 10px;
+    
+}
+
+.emititle {
+    margin: 0;
+}
+.emirow p {
+    margin: 0;
+    padding: 5px 0px 5px 5px;
+
+}
+
+.emirow:last-child {
+    border-bottom: none;
+}
+
+.errormsg {
+    width: 100%;
+    display: block;
+    height: 18px;
+    margin: 0;
+    padding: 2px;
+    font-size: 13px;
+    line-height: 12px;
+    color: red;
+}
+
+/* -------------------------------
+   MOBILE RESPONSIVE PAYMENT PAGE
+--------------------------------*/
+@media (max-width: 600px) {
+
+    .Payment-content {
+        flex-direction: column;      /* Row → Column */
+        align-items: center;
+        width: 100%;
+    }
+
+    /* ORDER SUMMARY WILL COME FIRST */
+    .Order-summary {
+        width: 100% !important;
+        order: 1;
+        margin-bottom: 20px;
+    }
+
+    /* PAYMENT FORM WILL COME AFTER SUMMARY */
+    .Payment-form-container {
+        width: 100% !important;
+        order: 2;
+    }
+
+    /* EMI BOX FULL WIDTH ON MOBILE */
+    .emisection {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    /* Pay button full width on mobile */
+    .Pay-button {
+        width: 100%;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .Pay-button button {
+        width: 100%;
+    }
+}
