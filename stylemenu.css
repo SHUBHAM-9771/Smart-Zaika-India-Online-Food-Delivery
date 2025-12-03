@@ -189,6 +189,50 @@
   background-color: #d84315;
 }
 
+/* * Menu items section */ */
+body.dark-mode #menu-section {
+    background: #121212;
+    color: #E0E0E0;
+}
+
+body.dark-mode #menu-titles {
+    color: #FFA726;
+}
+
+/* Inside menu items list */
+body.dark-mode #menu-items  {  
+    background: #1A1A1A;
+}
+
+body.dark-mode #menu-items .menu-item {  
+    background: #1A1A1A;
+    border: 1px solid #FF6F00;
+}
+
+body.dark-mode #menu-items .menu-item p {  
+    color: #FF6F00;
+}
+
+
+body.dark-mode .menu-list .menu-card:hover {
+    background: #2A2A2A;
+}
+
+body.dark-mode .menu-card img {
+    filter: brightness(0.9);
+}
+
+/* Buttons inside menu items */
+/* body.dark-mode .menu-card .add-btn {
+    background: #FF6F00;
+    color: #fff;
+} */
+/* 
+body.dark-mode .menu-card .add-btn:hover {
+    background: #FFA726;
+} */
+
+
 @media screen and (max-width: 400px) {
       #menu-items
      .restaurant-grid {
@@ -234,6 +278,16 @@
     object-fit: cover;
   }
 
+  .menu-item p {
+    letter-spacing: 1px;
+  font-size: 10px;
+  margin: 5px 0;
+  }
+
+  .menu-item button {
+  margin: 5px 0;
+  padding: 3px 6px;
+  }
 
 }
 
