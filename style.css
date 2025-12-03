@@ -168,44 +168,6 @@ body.dark-mode .restaurant-image {
     filter: brightness(0.85);
 }
 
-/* Menu items section */
-body.dark-mode #menu-section {
-    background: #121212;
-    color: #E0E0E0;
-}
-
-body.dark-mode #menu-titles {
-    color: #FFA726;
-}
-
-/* Inside menu items list */
-body.dark-mode .menu-list {
-    background: #1A1A1A;
-}
-
-body.dark-mode .menu-list .menu-card {
-    background: #1E1E1E;
-    color: #E0E0E0;
-    border: 1px solid #FF6F00;
-}
-
-body.dark-mode .menu-list .menu-card:hover {
-    background: #2A2A2A;
-}
-
-body.dark-mode .menu-card img {
-    filter: brightness(0.9);
-}
-
-/* Buttons inside menu items */
-body.dark-mode .menu-card .add-btn {
-    background: #FF6F00;
-    color: #fff;
-}
-
-body.dark-mode .menu-card .add-btn:hover {
-    background: #FFA726;
-}
 
 
 body.dark-mode  .footer {
@@ -279,6 +241,7 @@ body.dark-mode .user-dropdown ul li a:hover {
 } 
 
 .nav-link  a {
+    letter-spacing: 1px;
     text-decoration: none;
     font-size: 16px;
     color: 4E342E;
@@ -367,7 +330,7 @@ body.dark-mode .user-dropdown ul li a:hover {
     display: flex;
     flex-direction: row;
     align-items: center;
-    column-gap: 3px;
+    column-gap: 5px;
   }
 
   .nav-link a {
