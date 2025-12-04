@@ -288,3 +288,34 @@ body.dark-mode .cart-buttons .button1:hover {
             }
         }
 
+        @media (max-width: 400px) {
+            .Cart-info {
+                display: grid;
+                grid-template-columns: 1fr 1.5fr 1.3fr 1.1fr 0.5fr;
+            }
+
+            .cart-item {
+                display: grid;
+                grid-template-columns: 1fr 3.1fr 2.9fr 2.5fr 1.6fr; 
+                gap: 30px;
+            }
+           
+
+            .cart-item img {
+            width: 40px;
+            height: 40px;
+           }
+
+           .cart-item  p {
+            font-size: 10px;
+           }
+
+           .Cart-info1 p {
+            font-size: 10px;
+           }
+
+           .button1 {
+            width: auto;
+            padding: 12px 18px;
+           }
+        }
