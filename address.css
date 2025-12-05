@@ -13,6 +13,8 @@ body.dark-mode .address-container {
 }
 
 body.dark-mode .address-header h1 {
+    margin-top: 5px;
+    margin-bottom: 0px;
     color: #FFA726;
 }
 
@@ -186,6 +188,38 @@ body.dark-mode .address-footer1 p {
   .form-group select{
     width: 115%;
   }
+}
+
+@media (max-width: 400px) {
+   
+
+  .address-form {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px 50px;
+}
+
+  .form-group input {
+  width: 110px;
+  max-width: 400px;   /* desktop me limit rahegi */
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 16px;
+}
+  .form-group select{
+    /* width: 115%; */
+    width: 140px;
+  }
+
+  .continue-btn {
+    width: auto;
+    font-size: 15px;
+  }
+  .address-footer1 {
+  font-size: 14px;
+  margin-top: 10px;
+  margin: 0;
+}
 }
 
 
