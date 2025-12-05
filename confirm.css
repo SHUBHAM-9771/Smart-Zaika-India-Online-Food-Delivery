@@ -333,13 +333,7 @@ body.dark-mode .choose-msg {
     margin-bottom: 6px;
     font-size: 15px;
     }
-    .section-title {
-        font-size: 10px;
-        font-weight: 400;
-    }
-    .addr-info p {
-        font-size: 15px;
-    }
+   
 
     .proceed-payment-btn {
     width: auto;
@@ -355,5 +349,10 @@ body.dark-mode .choose-msg {
     border: 2px solid #D32f2f;
     background-color: #fff;
     }
+}
+
+@media (max-width: 400px) {
+
+    
 }
 
