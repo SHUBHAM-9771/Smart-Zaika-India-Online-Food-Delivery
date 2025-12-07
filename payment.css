@@ -372,4 +372,8 @@ body.dark-mode .Secure-text {
     .Pay-button button {
         width: 100%;
     }
+
+   #emiBox {
+    margin-left: 0px;
+   }
 }
