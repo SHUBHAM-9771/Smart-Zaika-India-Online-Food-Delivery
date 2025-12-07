@@ -269,11 +269,11 @@ img {
     justify-content: space-between;
     align-items: center;
     background: #fffaf5;
-    padding: 8px;
+    padding: 5px;
     border-radius: 14px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.06);
     box-sizing: border-box;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
 }
 img {
     width: 45px;
@@ -300,6 +300,7 @@ img {
     box-shadow: 0 4px 12px rgba(0,0,0,0.06);
     border: 1px solid #f0f0f0;
     box-sizing: border-box;
+    margin-bottom: 5px;
 }
 
 
