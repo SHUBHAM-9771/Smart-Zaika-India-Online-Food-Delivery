@@ -931,7 +931,7 @@ form button:hover {
                             /* -------------------------------Banner-----------------------------  */
 
 #bann {
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: start;
     font-family: 'Poppins', sans-serif;
@@ -1523,6 +1523,23 @@ footer.highlight1 {
   .highlight1 .card3 {
     width: 100%;
   }
+}
+
+
+@media (max-width: 400px) {
+  footer.highlight1 {
+    flex-direction: column;
+    text-align: center;
+  }
+  .highlight1 .card1,
+  .highlight1 .card2,
+  .highlight1 .card3 {
+    width: 100%;
+  }
+
+  .card2 {
+    padding: 0px 100px;
+}
 }
 
 
