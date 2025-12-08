@@ -931,7 +931,7 @@ form button:hover {
                             /* -------------------------------Banner-----------------------------  */
 
 #bann {
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: start;
     font-family: 'Poppins', sans-serif;
@@ -1067,7 +1067,117 @@ form button:hover {
         width: 50%;
         height: auto;
     }
-} */
+} 
+
+@media (max-width: 400px) {
+
+  .bann-title h3 {
+  margin: 0;
+  padding: 0;
+}
+
+.bann-subtitle p{
+  padding: 0;
+  margin: 0;
+} 
+
+
+
+.bann-container{
+    padding: 6px 6px;
+    width: 260px;
+    height: auto;
+    gap: 5px;
+    border-radius: 20px;
+}
+
+.bann-title {
+    padding-top: 10px;
+    font-weight: 700px;
+}
+
+.bann-subtitle {
+    display: inline-block;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 30px;
+    color: darkgreen;
+}
+
+
+.bann-button  button{
+    background-color: #f76b3b;
+    color: black;
+    width: 100px;
+    padding: 7px 10px;
+    font-size: 10px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.bann-button button:hover {
+    background-color: #d84315;
+    color: black;
+}
+
+.bann-offer {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    gap: 14px;
+}
+
+
+.offer-image img {
+    width: 140px;
+    height: 100px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+
+
+.offer-text {
+    font-size: 15px;
+}
+
+
+
+.offer-banner {
+  color: white;
+  text-align: center;
+  border-radius: 12px;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  width: 90%;
+  margin: 0px auto;
+  color: black;
+}
+.offer-banner p{
+    margin: 0;
+    padding: 0;
+}
+
+#clock {
+  font-size: 1rem;
+  margin-bottom: 5px;
+  color: black;
+}
+
+#offer-timer {
+  font-size: 1rem;
+  font-weight: bold;
+  color: red;
+}
+
+#totalprice {
+    font-size: 20px;
+    color: red;
+    padding: 0px 10px;
+}
+} 
 
 
 
