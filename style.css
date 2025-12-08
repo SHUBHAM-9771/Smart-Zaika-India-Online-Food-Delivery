@@ -583,7 +583,7 @@ form button:hover {
 
 .reg-popup {
     width: 400px;
-    height: 600px;
+    height: 500px;
     background-color: #FFF8E1;
     position: relative;
     border-radius: 10px;
@@ -882,11 +882,15 @@ form button:hover {
 
     /* Inputs 90% width on mobile */
     .input,
-    form button,
-    .reg-log {
+    form button {
         width: 90%;
          max-width: 90%;
     }
+     
+
+     .reg-log {
+    width: 190px;
+    max-width: 190px;}
 
     #loginForm input {
         width: 100%; 
@@ -900,10 +904,15 @@ form button:hover {
         width: 30px;
         height: 30px;
     }
-  
+     .input,
+     .space {
+        margin: 0px;
+     }
 
     .forget {
-        margin: 3px;
+        /* margin-top: 0px; */
+        margin: 0px 0px 3px 0px;
+
     }
 
     .user-dropdown {
